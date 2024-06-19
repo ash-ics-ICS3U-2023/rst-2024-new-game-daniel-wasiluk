@@ -8,11 +8,19 @@
     <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
+    <div id="instructionsModal">
+        <div class="modal-content">
+            <h1>Instructions</h1>
+            <img src="instructions.gif" alt="Instructions" class="instructions-img">
+            <p>There is a randomly selected square. Based on the distance from it, the colour of the button you clicked becomes increasingly less red and more blue (hot or cold/closer or farther). Additionally, each time you click a button it <b>adds 5s to the time!</b><br><br>Based off how fast (time) you find the correct square, you will have your score ranked for your top 5 scores. <br><br><b>Have fun!!!</b></b></p>
+            <button id="understoodButton">Understood</button>
+        </div>
+    </div>
     <div id="modal">
         <div class="modal-content">
             <h1>Tile Hunt</h1>
             <h2>Adjust the button size</h2>
-            <input type="range" id="slider" min="20" max="100" value="50">
+            <input type="range" id="slider" min="40" max="150" value="50">
             <span id="sliderValue">50</span>
             <button id="saveButton">Save</button>
         </div>
