@@ -1,29 +1,94 @@
-/* sets the font for everything  */
-html {
-    font-family: Arial, sans-serif;
+/* Makes the page look nice */
+body {
+    margin: 0; /*Makes sure theres no extra space around the edges*/
+    font-family: Arial, sans-serif; /*Sets text to arial font*/
+    display: flex;/*Aligns everything*/
+    justify-content: center;/*""*/
+    align-items: center;/*""*/
+    height: 100vh;/* Make sure it fills the whole screen */
+    background-color: #f0f0f0;/*bg colour*/
+    overflow: hidden;/*Can't see scroll bar*/
+    user-select: none;
+    /* Disable text selection */
 }
 
-body {
-    margin: 0;    
+#modal,
+#winModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* skibidi */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    overflow: hidden;
 }
 
-/*Creates font text and background colour, and aligns everything. */
+.modal-content,
+.win-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#slider {
+    width: 80%;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0056b3;
+}
+
 #gridContainer {
     display: grid;
+    width: 100%;
+    height: calc(100% - 50px);
+    /* Leave space for the stopwatch */
     gap: 1px;
 }
 
-/*The buttons css*/
 button.grid-button {
-    border: none;
+    border: none;/*No border on the buttons*/
     background-color: #ddd;
     cursor: pointer;
     width: 100%;
     height: 100%;
+    transition: background-color 0.3s ease; /*The button won't just change to the colour instantly, adds transition*/
+}
+
+button.grid-button.correct {
+    background-color: green; /*Makes the correct button green*/
+}
+
+#winModal {
+    display: none;
+}
+
+#stopwatch {
+    position: fixed;/*Stays in 1 spot*/
+    bottom: 0; /**/
+    width: 100%;
+    background-color: #333; 
+    color: white; /*The background and text colour*/
+    text-align: center;/*Puts text in center*/
+    padding: 10px;/*Spaces everything our*/
+    font-size: 18px; /*Font size*/
+}
+
+#highScoresList {
+    list-style-type: none;
 }

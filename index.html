@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Grid Game</title>
+    <title>Tile Hunt</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
+    <div id="modal">
+        <div class="modal-content">
+            <h1>Tile Hunt</h1>
+            <h2>Adjust the button size</h2>
+            <input type="range" id="slider" min="20" max="100" value="50">
+            <span id="sliderValue">50</span>
+            <button id="saveButton">Save</button>
+        </div>
+    </div>
     <div id="gridContainer"></div>
+    <div id="stopwatch">Time: 0s</div>
+    <div id="winModal">
+        <div class="win-content">
+            <h2>Congratulations!</h2>
+            <p id="winMessage"></p>
+            <h3>High Scores</h3>
+            <ul id="highScoresList"></ul>
+            <button id="playAgainButton">Play Again</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
